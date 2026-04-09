@@ -35,7 +35,7 @@ Essa mecânica cria um sistema de risco/recompensa que deixa o combate mais estr
 ## 👹 Inimigos e suas mecânicas
 Cada inimigo herda da classe base Personagens, mas sobrescreve o método defender() para criar comportamentos únicos.   
 🟩 Goblin — Esquiva Rápida
-- 60% de chance de esquivar automaticamente de ataques.
+- 50% de chance de esquivar automaticamente de ataques.
 - Irritante, rápido e imprevisível.  
 
 🟥 Orc — Fúria

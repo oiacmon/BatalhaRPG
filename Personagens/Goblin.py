@@ -13,7 +13,7 @@ class Goblin(Personagens):
         )
 
     def defender(self, dano):
-        chance_esquiva = 60
+        chance_esquiva = 50
         rolagem = random.randint(1, 100)
 
         if rolagem <= chance_esquiva:
