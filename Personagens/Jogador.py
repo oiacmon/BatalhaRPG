@@ -1,28 +1,23 @@
 from Personagens.Personagens import Personagens
+from random import randint
 
 class Jogador(Personagens):
     def __init__(self):
         super().__init__(
             name="Jogador",
-            health=120,
+            health=100,
             damage=15,
-            chance=80,
+            chance=70,
             image=
             """
-            ---------------------
-            |
-            |
-            |
-            |
-            |
-            |
-            ----------------------
             """
         )
 
     def curar(self):
-        self.health += 20
-        print("Você recuperou 20 de vida!")
+        cura = randint(15, 25)
+        self.health += cura
+        print(f"Você recuperou {cura} de vida!")
 
     def atacar(self):
+        self.damage = randint(15, 25)
         return self.damage
