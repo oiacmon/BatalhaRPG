@@ -3,6 +3,7 @@
 
 Um mini‑RPG de batalha em turnos feito em Python, com foco em mecânicas estratégicas, polimorfismo e inimigos com comportamentos únicos.
 O jogador enfrenta inimigos aleatórios, cada um com habilidades próprias, enquanto usa ataques, cura e esquiva para sobreviver.
+
 ---
 
 ## 🎮 Como funciona o jogo
@@ -51,6 +52,7 @@ Mais inimigos podem ser adicionados facilmente graças ao uso de polimorfismo.
 ---
 
 ## 🧠 Principais conceitos usados
+
 ✔ Polimorfismo  
 Cada inimigo implementa sua própria lógica de defesa, permitindo comportamentos únicos sem alterar o código da batalha.  
 ✔ Encapsulamento  
@@ -59,6 +61,7 @@ Cada personagem controla seus próprios atributos e métodos (ataque, cura, defe
 Dano, cura, esquiva e habilidades especiais usam random para tornar cada partida diferente.  
 ✔ Sistema de Buffs  
 A esquiva bem-sucedida concede bônus temporários que afetam o próximo turno do jogador.  
+
 --- 
 
 ## 📁 Estrutura do Projeto
