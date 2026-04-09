@@ -17,6 +17,7 @@ class Jogador(Personagens):
         cura = randint(15, 25)
         self.health += cura
         print(f"Você recuperou {cura} de vida!")
+        return cura
 
     def atacar(self):
         self.damage = randint(15, 25)

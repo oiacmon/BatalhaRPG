@@ -10,6 +10,7 @@ def Partida():
     print(f"Você encontrou um {inimigo.name} com {inimigo.health} de vida!")
 
     esquivando = False
+    buff_esquiva = False
 
     while True:
         if jogador.health <= 0:
@@ -33,12 +34,24 @@ Você derrotou o {inimigo.name}!
 
         if acao == "a":
             dano = jogador.atacar()
+
+            if buff_esquiva:
+                dano = int(dano * 1.5)
+                print("Você atacou com bônus da esquiva!")
+                buff_esquiva = False
+
+            dano = inimigo.defender(dano)
             inimigo.health -= dano
             print(f"Você causou {dano} de dano!")
             esquivando = False
 
         elif acao == "c":
-            jogador.curar()
+            if buff_esquiva:
+                print("Sua cura foi fortalecida pela esquiva!")
+                jogador.health += float(jogador.curar() * 1.5)
+                buff_esquiva = False
+            else:
+                jogador.curar()
             esquivando = False
 
         elif acao == "e":
@@ -52,10 +65,10 @@ Você derrotou o {inimigo.name}!
         dano_inimigo = inimigo.attack()
 
         if esquivando:
-            chance = random.randint(1, 100)
-            if chance <= 40:
+            if random.randint(1, 100) <= 50:
                 print("Você conseguiu esquivar! Nenhum dano recebido!")
                 dano_inimigo = 0
+                buff_esquiva = True
             else:
                 print("Você falhou em esquivar!")
             esquivando = False

@@ -6,10 +6,13 @@ class Golem(Personagens):
         super().__init__(
             name="Golem",
             health=200,
-            damage=randint(20,23),
-            chance=50,
+            damage=randint(20, 30),
+            chance=70,
             image="Golem"
         )
 
-    ##def special_defense(self):
-      ##  return self.health * 0.1  # regenera 10% da vida
+    def defender(self, dano):
+        reducao = int(dano * 0.4)
+        dano_final = dano - reducao
+        print("🪨 O Golem reduz parte do dano com sua armadura!")
+        return dano_final

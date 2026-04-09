@@ -14,3 +14,6 @@ class Personagens:
             return self.damage
         else:
             return 0
+
+    def defender(self, dano):
+        return dano
